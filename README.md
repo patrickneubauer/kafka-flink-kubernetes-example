@@ -7,6 +7,8 @@ Example showcasing the use of an [Apache Kafka](https://kafka.apache.org) topic 
 - Consumer using Kafka to output received messages
 - Streaming Consumer using Flink to count the occurrences of fruit names
 
+![media/kafka-flink-kubernetes-example-diagram.png](media/kafka-flink-kubernetes-example-diagram.png)
+
 Requirements
 ---
 - Kubernetes kubectl binaries (see [installation instructions](https://kubernetes.io/docs/tasks/tools/install-kubectl/))
@@ -259,10 +261,6 @@ Expected output:
 
 ![media/kubernetes-flink-consumer-5.png](media/kubernetes-flink-consumer-5.png)
 
-Video (<2 min):
-
-[https://drive.google.com/file/d/1NJuPFrJVrejuJZdKzNCSULedELQ1gX_k/view](https://drive.google.com/file/d/1NJuPFrJVrejuJZdKzNCSULedELQ1gX_k/view)
-
 
 Useful commands (optional)
 ---
@@ -322,3 +320,8 @@ See source below (untested).
 Source:
  - [https://kubernetes.io/docs/tutorials/stateless-application/](https://kubernetes.io/docs/tutorials/stateless-application/)
 
+
+Credits
+---
+
+Icons made by [Freepik](https://www.flaticon.com/authors/freepik), [DinosoftLabs](https://www.flaticon.com/authors/dinosoftlabs), and [Those Icons](https://www.flaticon.com/authors/those-icons).
