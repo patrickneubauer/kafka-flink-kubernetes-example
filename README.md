@@ -14,24 +14,6 @@ Requirements
 - Running Kubernetes minikube or distributed cluster
 
 
-Infrastructure provisioning (local [Kubernetes minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/) cluster, untested)
----
-
-Provision new Kubernetes minikube on localhost:
-
-    minikube start
-
-Deploy and access Kubernetes dashboard on localhost (see [documentation](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) for more details) to inspect and manage resources (pods, services, etc.):
-
-    kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta8/aio/deploy/recommended.yaml
-
-    kubectl proxy
-
-Destroy running Kubernetes minikube:
-
-    minikube delete
-
-
 Infrastructure provisioning (remote Kubernetes cluster, tested)
 ---
 
@@ -165,10 +147,8 @@ spec:
 EOF
 ```
     
-
 Sources:
  - [Strimzi.io Quickstart](https://strimzi.io/docs/quickstart/latest/)
- - ...
 
 
 Flink deployment
@@ -314,6 +294,24 @@ List existing Kafka topics in command-line (replace ``CLUSTER-NODE-EXTERNAL-ADDR
 Execute Flink job by uploading from command-line. This requires Flink binaries to be available and Flink port-forward to be setup as indicated in section 'Setup Flink port-forwarding (...)')
 
     flink run -m localhost:8081 /usr/local/Cellar/apache-flink/1.10.0/libexec/examples/streaming/WordCount.jar
+
+
+Infrastructure provisioning (local [Kubernetes minikube](https://kubernetes.io/docs/setup/learning-environment/minikube/) cluster, untested)
+---
+
+Provision new Kubernetes minikube on localhost:
+
+    minikube start
+
+Deploy and access Kubernetes dashboard on localhost (see [documentation](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) for more details) to inspect and manage resources (pods, services, etc.):
+
+    kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v2.0.0-beta8/aio/deploy/recommended.yaml
+
+    kubectl proxy
+
+Destroy running Kubernetes minikube:
+
+    minikube delete
 
 
 Create Kubernetes load balancer and expose external IP address (optional)
